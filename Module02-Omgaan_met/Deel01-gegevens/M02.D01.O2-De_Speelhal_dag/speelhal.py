@@ -14,3 +14,4 @@ print (f"3 personen vr seat voor 45 minuten kost : {vrseatTotaal}")
 print (f"==============================================")
 Totaalprijs = vrseatTotaal + Totaalticket
 print (f"In totaal kost het  : {Totaalprijs}")
+print (f"Dit geweldige dagje-uit met 4 mensen in de Speelhal met 45 minuten VR kost je maar {Totaalprijs} euro")

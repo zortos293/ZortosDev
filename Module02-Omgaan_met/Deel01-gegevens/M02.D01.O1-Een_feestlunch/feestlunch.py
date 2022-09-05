@@ -11,4 +11,4 @@ totaalmetkorting = totaalprijs - korting *3
 # prijs met korting
 print (f"prijs met Korting is : {totaalmetkorting}")
 
-
+print (f"De feestlunch kost je bij de bakker {totaalmetkorting} euro voor de 17 croissantjes en de 2 stokbroden als de 3 kortingsbonnen nog geldig zijn!")
