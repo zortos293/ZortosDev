@@ -4,10 +4,10 @@ korting = 0.50
 
 
 
-totaal_Prijs = crossant *17 + stokbrood *2
+totaal_prijs = crossant *17 + stokbrood *2
 # in totaal prijs
-print (f"Prijs in totaal is : {totaal_Prijs}")
-totaal_met_korting = totaal_Prijs - korting *3
+print (f"Prijs in totaal is : {totaal_prijs}")
+totaal_met_korting = totaal_prijs - korting *3
 # prijs met korting
 print (f"Prijs met Korting is : {totaal_met_korting}")
 
