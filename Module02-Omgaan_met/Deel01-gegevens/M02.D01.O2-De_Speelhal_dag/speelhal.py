@@ -7,11 +7,11 @@ personen = 3
 
 totaal_ticket = ticket *3
 print (f"Totaal kost de tickets : {totaal_ticket}")
-vrseat_1_Persoon = vr_seat * 9
-print (f"1 persoon vr seat voor 45 minuten kost : {vrseat_1_Persoon}")
-totaal_Vrseat = vrseat_1_Persoon * 3
-print (f"3 personen vr seat voor 45 minuten kost : {totaal_Vrseat}")
+vrseat_1_persoon = vr_seat * 9
+print (f"1 persoon vr seat voor 45 minuten kost : {vrseat_1_persoon}")
+totaal_vrseat = vrseat_1_persoon * 3
+print (f"3 personen vr seat voor 45 minuten kost : {totaal_vrseat}")
 print (f"==============================================")
-totaal_prijs = totaal_Vrseat + totaal_ticket
+totaal_prijs = totaal_vrseat + totaal_ticket
 print (f"In totaal kost het  : {totaal_prijs}")
 print (f"Dit geweldige dagje-uit met {personen} mensen in de Speelhal met 45 minuten VR kost je maar {totaal_prijs} euro")
