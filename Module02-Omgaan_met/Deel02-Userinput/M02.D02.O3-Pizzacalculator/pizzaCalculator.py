@@ -21,7 +21,7 @@ U heeft :
 {pizza_medium_amount} Medium pizza ({round_up(pizza_medium_total_price ,3 )}€)
 {pizza_large_amount} Large pizza ({round_up(pizza_large_total_price ,3 )}€)
 ==========================================
-In Totaal kost het : ({pizza_total_price}€)
+In Totaal kost het : ({round_up(pizza_total_price,3)}€)
 """)   
 input("press enter key to exit")
 
