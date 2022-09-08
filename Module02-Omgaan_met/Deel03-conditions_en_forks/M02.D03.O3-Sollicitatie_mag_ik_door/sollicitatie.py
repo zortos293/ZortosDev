@@ -1,6 +1,4 @@
-from distutils.log import debug
-from operator import truediv
-from pickle import FALSE, TRUE
+
 
 #Header
 print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
@@ -37,7 +35,6 @@ vraag_13 = input("Heeft u de Certificaat â€œOverleven met gevaarlijk personeelâ€
 
 # Vars
 eisen_lengte = 150
-eisen_lengte_geslaagd = False
 eisen_snor = 10
 eisen_snor_geslaagd =False
 eisen_krulhaar = 20
@@ -53,23 +50,22 @@ eisen_acrobatiek_geslaagd = False
 questions1_geslaagd = False
 questions2_geslaagd = False
 questions_geslaagd = False
+vraag_9_vrouw3 = 0
 # End of vars
 
 # Calculeren
-if vraag_10 > eisen_lengte:
-    eisen_lengte_geslaagd = True
-
-if vraag_1 > eisen_dieren:
-    eisen_dieren_geslaagd = True
-elif vraag_2 > eisen_jongleren:
-    eisen_jongleren_geslaagd = True
-elif vraag_4 > eisen_acrobatiek:
-    eisen_acrobatiek_geslaagd = True
+eisen_lengte_geslaagd = vraag_10 > eisen_lengte
+eisen_dieren_geslaagd = vraag_1 > eisen_dieren
+eisen_jongleren_geslaagd = vraag_2 > eisen_jongleren
+eisen_acrobatiek_geslaagd = True
 
 if vraag_9_man2 > eisen_snor:
     eisen_snor_geslaagd = True
-elif vraag_9_vrouw3 > eisen_krulhaar:
-    eisen_krulhaar_geslaagd = True
+if vraag_9_vrouw3 == 0:
+    print()
+else:
+    if vraag_9_vrouw3 > eisen_krulhaar:
+        eisen_krulhaar_geslaagd = True
 
 if [eisen_krulhaar_geslaagd,eisen_snor_geslaagd].count(True): # kijkt of er een van de bools True zijn
     questions1_geslaagd = True
@@ -78,7 +74,6 @@ if [eisen_krulhaar_geslaagd,eisen_snor_geslaagd].count(True): # kijkt of er een 
 if [eisen_dieren_geslaagd, eisen_jongleren_geslaagd, eisen_acrobatiek_geslaagd].count(True): # kijkt of er een van de bools True zijn
     questions2_geslaagd = True
 
-questions_geslaagd = False
 if [vraag_3, vraag_5, vraag_6,vraag_7,vraag_9_man,vraag_13].count(False): # kijkt of er een van de bools false zijn
     print()
 else:
