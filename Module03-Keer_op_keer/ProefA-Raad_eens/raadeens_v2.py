@@ -12,7 +12,6 @@ def rounds(poginen: int) -> bool:
             print("u heeft een letter ingevoerd")
             pogingen = pogingen +1
         diffrence_nummer =  abs(gen_nummer -gebruiker_nummer)
-        print(diffrence_nummer)
         if diffrence_nummer == 0:
             print("gewonnen!!")
             return True
@@ -40,6 +39,8 @@ gen_nummer = randint(0, 100)
 while round_game != ROUNDS_INT:
     if rounds(POGINEN_INT):
         scoreboard = scoreboard + 1
+    else:
+        print("je hebt meer dan 10 keer probeerd RIP")
     round_game = round_game + 1
     if input("Nog een getal raden? [Y/N]").lower() == "y":
         gen_nummer = randint(0, 100)
