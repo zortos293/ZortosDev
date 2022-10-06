@@ -5,20 +5,7 @@ mm_aantal = int(input("hoeveel M&M’s moet er aan de zak toegevoegd worden?"))
 mm_zak = []
 
 for z in range(mm_aantal):
-    randomint = randint(1,6)
-    match randomint:
-        case 1:
-            mm_zak.append(mm_kleuren[0])
-        case 2:
-            mm_zak.append(mm_kleuren[1])
-        case 3:
-            mm_zak.append(mm_kleuren[2])
-        case 4:
-            mm_zak.append(mm_kleuren[3])           
-        case 5:
-            mm_zak.append(mm_kleuren[4])           
-        case 6:
-            mm_zak.append(mm_kleuren[5])           
+    mm_zak.append(mm_kleuren[randint(0,5)])         
             
 
 bagOfMnMs = {
