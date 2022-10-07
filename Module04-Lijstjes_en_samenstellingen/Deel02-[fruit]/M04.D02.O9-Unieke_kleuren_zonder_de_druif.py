@@ -1,9 +1,7 @@
 from fruitmand import fruitmand
-
-fruitmand.pop(4)
-totaal_weight = 0
-kleuren = ''
+test_dict = {}
 for fruit in fruitmand:
-        if fruit['color'] not in kleuren:
-            kleuren +=  '\n'+   fruit['color']
-print(kleuren)
+    test_dict[fruit['name']] = fruit['weight'] / 100
+converted_dict = dict(sorted(test_dict.items(), key=lambda x:x[1]))
+for key, value in reversed(converted_dict.items()):
+    print(f"{key} {value} KG")
