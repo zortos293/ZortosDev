@@ -1,5 +1,4 @@
 # comment
-from functools import total_ordering
 import math
 
 
@@ -25,4 +24,5 @@ multiline_xin = F'''mULTIII LINENEEEE
 {X}
 
 '''
-
+for x,fruit in enumerate(fruitmand):
+    

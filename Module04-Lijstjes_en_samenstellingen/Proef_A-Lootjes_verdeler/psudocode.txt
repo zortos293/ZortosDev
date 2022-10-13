@@ -1,0 +1,29 @@
+lijst namen []
+lijst lot []
+lijst combinatie []
+namen.append(input('Vul gebruiker naam'))
+while True:
+    
+    als 'wilt u nog meer gebruikers toevoegen?' is ja
+            namen.append(input('Vul gebruiker naam'))
+    anders
+        als len(namen) > 2 
+            lot = namen.copy()
+            lot.shuffle()
+            for x,naam in Enumerate(namen):
+                als naam[x] == lot[x]:
+                    for z,lotnaam in Enumerate(lot):
+                        if naam[x] != lot[z]:
+                            combinatie.append(f'Naam : {naam[x]} Lot : {lot[z]}')
+                            lot.pop(z)
+                            break
+                anders
+                    combinatie.append(f'Naam : {naam[x]} Lot : {lot[x]}')
+                    lot.pop(x)
+            break
+        anders
+            je hebt geen genoeg vrienden :(
+            ga terug
+
+for lijst in combinatie:
+    print(lijst)
