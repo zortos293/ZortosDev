@@ -2,8 +2,6 @@ zwembad_breedte = float(input("Geef de breedte van het zwembad in: "))
 zwembad_lengte = float(input("Geef de lengte van het zwembad in: "))
 zwembad_hoogte = float(input("Geef de hoogte van het zwembad in: "))
 
-
-
 zwembad_meters = zwembad_lengte*zwembad_breedte*zwembad_hoogte
 zwembad_uitgraven = zwembad_meters*25
 zwembad_afvoeren = zwembad_meters*32.5
