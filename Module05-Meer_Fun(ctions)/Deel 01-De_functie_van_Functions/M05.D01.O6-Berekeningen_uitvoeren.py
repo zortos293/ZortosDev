@@ -105,8 +105,11 @@ def answering_machine(question):
 
 answer = 0
 
-question = input("wat wilt u doen? A) getallen optellen, B) getallen aftrekken, C) getallen vermenigvuldigen, D) getallen delen, E) getal ophogen, F) getal verlagen, G) getal verdubbelen of H) getal halveren?\n >>")
-answering_machine(question.capitalize())
+
 while True:
-    question = input(f"Wil je wat met het antwoord ({answer}) doen? A) getallen optellen, B) getallen aftrekken, C) getallen vermenigvuldigen, D) getallen delen, E) getal ophogen, F) getal verlagen, G) getal verdubbelen of H) getal halveren? I) Nee?\n >>")
-    answering_machine(question.capitalize())
+    if answer != 0:
+        question = input(f"Wil je wat met het antwoord ({answer}) doen? A) getallen optellen, B) getallen aftrekken, C) getallen vermenigvuldigen, D) getallen delen, E) getal ophogen, F) getal verlagen, G) getal verdubbelen of H) getal halveren? I) Nee?\n >>")
+        answering_machine(question.capitalize())
+    else:
+        question = input("wat wilt u doen? A) getallen optellen, B) getallen aftrekken, C) getallen vermenigvuldigen, D) getallen delen, E) getal ophogen, F) getal verlagen, G) getal verdubbelen of H) getal halveren?\n >>")
+        answering_machine(question.capitalize())
