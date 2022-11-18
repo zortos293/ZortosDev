@@ -1,6 +1,10 @@
 restart = True
 slechte_einde_count = 0
 goede_einde_count = 0
+
+vragen_ja = []
+vragen_nee = []
+
 while (restart == True):
     Vraag_1 = input('je zit thuis in het avond\n je vriend gerard belt\nhij vraagt of je mee wil naar het park\n\n[y voor ja  n voor nee]\n>').lower()
     if Vraag_1 == 'y': 
@@ -27,7 +31,7 @@ while (restart == True):
         elif Vraag_1_ja != 'y':
             Vraag_1_ja_fiets_thuis = print('Je gaat met de bus\nde bus is rustig en je ontmoet je friend en lopen rond de park\n(Goede einde unlocked)')
             goede_einde_count = goede_einde_count +1
-    if not Vraag_1 == 'y':
+    else:
         vraag_1_nee = input('Je bent thuis\nje wilt gaan slapen maar nook nog tv kijken\nwat ga je doen 1.slapen of nog 2.tv kijken\n[1/2]\n>').lower()
         if vraag_1_nee == '1':
             vraag_1_nee_slapen = int(input('hoelang wil je gaan slapen?\n\n>'))

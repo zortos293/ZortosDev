@@ -12,7 +12,7 @@ rentStuff       = False
 party           = [mainCharacter]
 
 if len(mainCharacter['name']) > 0:
-    print_colorvars('Er was een jonge avonturier genaamd {S} die een schatkaart had gevonden.', [mainCharacter['name']])
+    print_colorvars('Er was een jonge avonturier genaamd {} die een schatkaart had gevonden.', [mainCharacter['name']])
 else:
     print_colorvars('Er was een jonge avonturier die een schatkaart had gevonden.')
 
