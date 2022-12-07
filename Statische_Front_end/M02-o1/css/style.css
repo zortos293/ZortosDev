@@ -1,0 +1,50 @@
+h1 {
+    color: blue;
+    margin-left: 50px;
+}
+
+html {
+    background-color: gray;
+}
+
+body {
+    background-color: white;
+    margin : 0 auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    padding-bottom: 50px;
+
+}
+.first {
+    background-color: mediumaquamarine;
+
+    padding: 10px;
+    margin:0 auto;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.second {
+    background-color: burlywood;
+
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.second h2 {
+    color: green;
+}
+
+.first h2 {
+    color: red;
+}
+
+.first p {
+    font-weight: bold;
+    font-size: 20px;
+
+}
+

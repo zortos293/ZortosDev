@@ -55,9 +55,9 @@
   margin: 0 auto;
   display: block;
   margin-top: 20px;
-  
+
 }
-.GithubBTN {
+.BTN {
   background-color:  gray;
   color: white;
   border: 1px , solid, lightgray;
