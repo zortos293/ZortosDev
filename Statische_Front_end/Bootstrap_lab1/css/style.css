@@ -1,0 +1,23 @@
+html{
+	font-family: verdana;
+	font-size: 20px;
+}
+#elem1,#elem2,#elem3,#elem4,#elem5,#sub *{
+	border:1px solid grey;
+}
+
+#elem1{
+	background-color:red;
+}
+#elem2{
+	background-color: orange;
+}
+#elem4{
+	background-color: green;
+}
+#elem5{
+	background-color: blue;
+}
+#sub *{
+	background-color:yellow;
+}

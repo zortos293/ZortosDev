@@ -10,13 +10,13 @@ print_chapter(chapterNr, 'THE FELLOWSHIP')
 cashInGold      = getPersonCashInGold(mainCharacter['cash'])
 rentStuff       = False
 party           = [mainCharacter]
-
 if len(mainCharacter['name']) > 0:
     print_colorvars('Er was een jonge avonturier genaamd {} die een schatkaart had gevonden.', [mainCharacter['name']])
 else:
     print_colorvars('Er was een jonge avonturier die een schatkaart had gevonden.')
 
 if cashInGold != None and cashInGold > 0:
+    
     print_colorvars('{} had maar {} goud op zak, dus was wel geinterreseerd in meer.', [mainCharacter['name'], cashInGold])
 
 if len(friends) > 0:

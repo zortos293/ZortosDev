@@ -1,6 +1,6 @@
 import time
 from termcolor import colored
-from data import JOURNEY_IN_DAYS , COST_FOOD_HUMAN_COPPER_PER_DAY , COST_FOOD_HORSE_COPPER_PER_DAY , mainCharacter , friends , adventurerGear , investors , treasure        
+from data import JOURNEY_IN_DAYS , COST_FOOD_HUMAN_COPPER_PER_DAY , COST_FOOD_HORSE_COPPER_PER_DAY         
 
 ##################### M04.D02.O2 #####################
 
@@ -33,16 +33,15 @@ def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
 ##################### M04.D02.O5 #####################
 
 def getFromListByKeyIs(list:list, key:str, value:any) -> list:
-    pass
+    return [item for item in list if item[key] == value]
 
 def getAdventuringPeople(people:list) -> list:
-    pass
+    return getFromListByKeyIs(people, 'adventuring', True)
 
-def getShareWithFriends(friends:list) -> int:
-    pass
-
+def getShareWithFriends(friends:list) -> list:
+    return getFromListByKeyIs(friends, 'shareWith', True)
 def getAdventuringFriends(friends:list) -> list:
-    pass
+    return getFromListByKeyIs(friends, 'adventuring', True)
 
 ##################### M04.D02.O6 #####################
 
