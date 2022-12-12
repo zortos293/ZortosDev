@@ -25,18 +25,23 @@ if getNumberOfTentsNeeded(6) != 2:
     print_colorvars(vars=['Test 5 is False'], color='red')
 else:
     print_colorvars(vars=['Test 5 is correct'], color='green')
-print(getTotalRentalCost(1,2))
-if getTotalRentalCost(1,2) != 23.0:
+
+if getTotalRentalCost(1,2) != 22.0:
     print_colorvars(vars=['Test 6 is False'], color='red')
 else:
     print_colorvars(vars=['Test 6 is correct'], color='green')
-print(getTotalRentalCost(5,2))
-if getTotalRentalCost(5,2) != 67.0:
+
+if getTotalRentalCost(5,2) != 62.0:
     print_colorvars(vars=['Test 7 is False'], color='red')
 else:
     print_colorvars(vars=['Test 7 is correct'], color='green')
 
-if getTotalRentalCost(3,11) != 99.0:
+if getTotalRentalCost(3,11) != 96.0:
     print_colorvars(vars=['Test 8 is False'], color='red')
 else:
     print_colorvars(vars=['Test 8 is correct'], color='green')
+
+if getTotalRentalCost(23,5) != 260.0:
+    print_colorvars(vars=['Test 9 is False'], color='red')
+else:
+    print_colorvars(vars=['Test 9 is correct'], color='green')

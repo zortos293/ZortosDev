@@ -55,17 +55,33 @@ def getNumberOfTentsNeeded(people:int) -> int:
     pass
 
 def getTotalRentalCost(horses:int, tents:int) -> float:
-    
     return (horses * silver2gold(COST_HORSE_SILVER_PER_DAY) * JOURNEY_IN_DAYS) + (tents * (COST_TENT_GOLD_PER_WEEK * math.ceil(JOURNEY_IN_DAYS / 7)) )
     pass
 
 ##################### M04.D02.O7 #####################
 
 def getItemsAsText(items:list) -> str:
-    pass
+    upload = ""
+    for a in items:
+        if upload != "":
+            upload += f", {a['amount']}{a['unit']} {a['name']}"
+        else:
+            upload += f"{a['amount']}{a['unit']} {a['name']}"
+    return upload
 
 def getItemsValueInGold(items:list) -> float:
-    pass
+    price_gold = 0
+    for a in items:
+        match a['price']['type']:
+            case "copper":
+                price_gold += round(copper2gold(a['price']['amount'] * a['amount']),2)
+            case "silver":
+                price_gold += round(silver2gold(a['price']['amount']* a['amount']), 2)
+            case "gold":
+                price_gold += a['price']['amount'] * a['amount']
+            case "platinum":
+                price_gold += platinum2gold(a['price']['amount'] * a['amount'])
+    return price_gold
 
 ##################### M04.D02.O8 #####################
 
