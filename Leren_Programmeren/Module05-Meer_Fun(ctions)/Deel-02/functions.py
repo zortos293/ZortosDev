@@ -28,8 +28,7 @@ def getPersonCashInGold(personCash:dict) -> float:
 def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
     peopleCost = people * JOURNEY_IN_DAYS * COST_FOOD_HUMAN_COPPER_PER_DAY
     horsesCost = horses * JOURNEY_IN_DAYS * COST_FOOD_HORSE_COPPER_PER_DAY
-    coppertosilver = copper2silver(peopleCost + horsesCost)
-    return silver2gold(coppertosilver)
+    return round(copper2gold(peopleCost + horsesCost),2)
 
 ##################### M04.D02.O5 #####################
 
@@ -86,6 +85,17 @@ def getItemsValueInGold(items:list) -> float:
 ##################### M04.D02.O8 #####################
 
 def getCashInGoldFromPeople(people:list) -> float:
+    price_gold = 0
+    for a in people:
+        if a['cash']['platinum'] != 0:
+            price_gold += platinum2gold(a['cash']['platinum'])
+        if a['cash']['gold'] != 0:
+            price_gold += a['cash']['gold']
+        if a['cash']['silver'] != 0:
+            price_gold += silver2gold(a['cash']['silver'])
+        if a['cash']['copper'] != 0:
+            price_gold += copper2gold(a['cash']['copper'])
+    return price_gold 
     pass
 
 ##################### M04.D02.O9 #####################
