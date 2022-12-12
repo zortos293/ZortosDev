@@ -95,7 +95,7 @@ def getCashInGoldFromPeople(people:list) -> float:
             price_gold += silver2gold(a['cash']['silver'])
         if a['cash']['copper'] != 0:
             price_gold += copper2gold(a['cash']['copper'])
-    return price_gold 
+    return round(price_gold ,2)
     pass
 
 ##################### M04.D02.O9 #####################
