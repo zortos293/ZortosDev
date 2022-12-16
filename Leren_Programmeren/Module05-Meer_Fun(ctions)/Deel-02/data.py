@@ -161,7 +161,7 @@ investors = [{
     'name' : 'Dwindel',
     'adventuring' : True,
     'profitReturn' : 9,
-    'cash' : {
+    'cash' : {  
         'platinum' : 4,
         'gold' : 5,
         'silver' : 0,
