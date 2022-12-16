@@ -1,7 +1,7 @@
 import time
 from termcolor import colored
 import math
-from data import JOURNEY_IN_DAYS , COST_FOOD_HUMAN_COPPER_PER_DAY , COST_FOOD_HORSE_COPPER_PER_DAY , COST_TENT_GOLD_PER_WEEK,COST_HORSE_SILVER_PER_DAY        
+from data import *      
 
 ##################### M04.D02.O2 #####################
 
@@ -97,7 +97,6 @@ def getCashInGoldFromPeople(people:list) -> float:
         if a['cash']['copper'] != 0:
             price_gold += copper2gold(a['cash']['copper'])
     return round(price_gold ,2)
-    pass
 
 ##################### M04.D02.O9 #####################
 
@@ -117,14 +116,20 @@ def getTotalInvestorsCosts(investors:list, gear:list) -> float:
     price_gold += getTotalRentalCost(len(adventuring_investors), len(adventuring_investors))
     print(price_gold)
     return price_gold 
-    pass
 
 ##################### M04.D02.O10 #####################
 
-def getMaxAmountOfNightsInInn(leftoverGold:float, people:int, horses:int) -> int:
-    pass
+def getMaxAmountOfNightsInInn(leftoverGold:float, people:int, horses:int) -> int:   
+    human_per_night_Gold = silver2gold(COST_INN_HUMAN_SILVER_PER_NIGHT) * people
+    horses_per_night_Gold = copper2gold(COST_INN_HORSE_COPPER_PER_NIGHT) * horses
+    return int(leftoverGold / (human_per_night_Gold + horses_per_night_Gold))
 
 def getJourneyInnCostsInGold(nightsInInn:int, people:int, horses:int) -> float:
+    gold_per_night = silver2gold(COST_INN_HUMAN_SILVER_PER_NIGHT)
+    human_per_night_Gold =  gold_per_night * people #0.6
+    horses_gold_per_night = copper2gold(COST_INN_HORSE_COPPER_PER_NIGHT)
+    horses_per_night_Gold = horses_gold_per_night * horses #0.1
+    return round((human_per_night_Gold + horses_per_night_Gold) * nightsInInn,2)
     pass
 
 ##################### M04.D02.O12 #####################
