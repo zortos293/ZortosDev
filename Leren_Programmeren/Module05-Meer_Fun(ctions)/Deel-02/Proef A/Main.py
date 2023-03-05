@@ -1,16 +1,22 @@
 import Variables
+ijsje = {}
+ijsjes = []
+PrintBonnetje = False
 
+print("Welkom bij Papi Gelato")
+while not PrintBonnetje:
+    ijsje["klant"] = Variables.vraag_klant()
+    if ijsje["klant"] == "zakelijk":
+        print("testtt")
+    elif ijsje["klant"] == "klant":
+        ijsje["bolletjes"] = Variables.vraag_bolletjes()
+        ijsje["verpakking"] = Variables.vraag_verpakking(ijsje["bolletjes"])
+        ijsje["smaakjes"] = Variables.vraag_smaakje(ijsje["bolletjes"])
+        ijsje["toppings"] = Variables.vraag_topping(ijsje["bolletjes"])
+        ijsje["prijs"] = Variables.bereken_prijs(ijsje,ijsje["klant"])
+        PrintBonnetje = Variables.vraag_printbonnetje()
+        ijsjes.append(ijsje)
+        print(ijsje)
 
-while True :
-        Amount_question = int(input("Hoeveel bolletjes wilt u?\n> "))
-        if Amount_question > 8:
-            print("Sorry, dat is te veel.")
-            stap1(0,hoorntjes,bakjes)
-        elif Amount_question <= 3:
-            stap2(Amount_question,hoorntjes,bakjes)
-        elif Amount_question <= 8:
-            print(f"Dan krijgt u van mij {Amount_question} bolletje(s).")
-            stap3(Amount_question,hoorntjes,bakjes)
-        else:
-            print("Sorry, dat begrijp ik niet.")
-            stap1(bolletjes,hoorntjes,bakjes)
+Variables.PrintBonnetje(ijsjes)
+
