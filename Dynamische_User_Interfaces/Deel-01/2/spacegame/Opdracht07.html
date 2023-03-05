@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SpaceShip Opdracht01</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <script src="js/spacegame.js" type="application/javascript"></script>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        //SpaceShip library inladen
+        var spaceShip = new SpaceShip(document.getElementById('container'));
+        //Level inladen
+        spaceShip.loadLevel(7);
+        //Eigen acties
+        spaceShip.run(function () {
+            // code  start
+
+            spaceShip.rotateRight();
+            spaceShip.moveForward();
+            spaceShip.rotateLeft();
+            spaceShip.moveForward();
+            spaceShip.moveForward();
+            spaceShip.rotateLeft();
+            spaceShip.moveForward();
+            spaceShip.rotateRight();
+            spaceShip.moveForward();
+            spaceShip.moveForward();
+            // code  einde
+        });
+    </script>
+</body>
+</html>
