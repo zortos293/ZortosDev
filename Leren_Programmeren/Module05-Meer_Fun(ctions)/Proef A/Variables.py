@@ -7,11 +7,11 @@ SPRINKELS_PRIJS = 0.30
 IJS_LITER_PRIJS = 9.80
 CARAMEL_SAUS_HOORNTJE_PRIJS = 0.90
 CARAMEL_SAUS_BAKJE_PRIJS = 0.90
+
 BTW = 9
 smaakjes = (
     "Chocolade", 
     "Vanille",
-    "Munt",
     "Aardbei",
 )
 toppings = (
@@ -143,10 +143,6 @@ def Bereken_Totaal(ijsjes,klant) -> dict:
                 if "B.Aardbei" in smaak:
                     totaal_dict.setdefault("B.Aardbei", 0)
                     totaal_dict["B.Aardbei"] += 1
-                if "B.Munt" in smaak:
-                    totaal_dict.setdefault("B.Munt", 0)
-                    totaal_dict["B.Munt"] += 1
-                
             for topping in ijsje["toppings"]:
                 if "Slagroom" in topping:
                     totaal_dict.setdefault("Slagroom", 0)
@@ -175,9 +171,6 @@ def Bereken_Totaal(ijsjes,klant) -> dict:
                 elif "L.Vanille" in smaak:
                     totaal_dict.setdefault("L.Vanille", 0)
                     totaal_dict["L.Vanille"] += 1
-                elif "L.Munt" in smaak:
-                    totaal_dict.setdefault("L.Munt", 0)
-                    totaal_dict["L.Munt"] += 1
                 elif "L.Aardbei" in smaak:
                     totaal_dict.setdefault("L.Aardbei", 0)
                     totaal_dict["L.Aardbei"] += 1
@@ -218,8 +211,6 @@ def PrintBonnetje(ijsjes,klant):
             print(f"{totaal_dict['L.Chocolade']} x {IJS_LITER_PRIJS:.2f}€ = {totaal_dict['L.Chocolade'] * IJS_LITER_PRIJS:.2f}€")
         if "L.Vanille" in totaal_dict and totaal_dict["L.Vanille"] > 0:
             print(f"{totaal_dict['L.Vanille']} x {IJS_LITER_PRIJS:.2f}€ = {totaal_dict['L.Vanille'] * IJS_LITER_PRIJS:.2f}€")
-        if "L.Munt" in totaal_dict and totaal_dict["L.Munt"] > 0:
-            print(f"{totaal_dict['L.Munt']} x {IJS_LITER_PRIJS:.2f}€ = {totaal_dict['L.Munt'] * IJS_LITER_PRIJS:.2f}€")
         if "L.Aardbei" in totaal_dict and totaal_dict["L.Aardbei"] > 0:
             print(f"{totaal_dict['L.Aardbei']} x {IJS_LITER_PRIJS:.2f}€ = {totaal_dict['L.Aardbei'] * IJS_LITER_PRIJS:.2f}€")
         
@@ -235,14 +226,16 @@ def PrintBonnetje(ijsjes,klant):
             print(f"B.Chocolade : {totaal_dict['B.Chocolade']} x {BOLLETJES_PRIJS:.2f}€ = {totaal_dict['B.Chocolade'] * BOLLETJES_PRIJS:.2f}€")
         if "B.Vanille" in totaal_dict:
             print(f"B.Vanille : {totaal_dict['B.Vanille']} x {BOLLETJES_PRIJS:.2f}€ = {totaal_dict['B.Vanille'] * BOLLETJES_PRIJS:.2f}€")
-        if "B.Munt" in totaal_dict: 
-            print(f"B.Munt : {totaal_dict['B.Munt']} x {BOLLETJES_PRIJS:.2f}€ = {totaal_dict['B.Munt'] * BOLLETJES_PRIJS:.2f}€")
         if "B.Aardbei" in totaal_dict:
             print(f"B.Aardbei : {totaal_dict['B.Aardbei']} x {BOLLETJES_PRIJS:.2f}€ = {totaal_dict['B.Aardbei'] * BOLLETJES_PRIJS:.2f}€")
         if "sprinkels" in totaal_dict:
             print(f"Sprinkels : {totaal_dict['sprinkels']} x {SPRINKELS_PRIJS:.2f}€ = {totaal_dict['sprinkels'] * SPRINKELS_PRIJS:.2f}€")
         if "slagroom" in totaal_dict:
             print(f"Slagroom : {totaal_dict['slagroom']} x {SLAGROOM_PRIJS:.2f}€ = {totaal_dict['slagroom'] * SLAGROOM_PRIJS:.2f}€")
+        if "Caramel_Saus_bakje" in totaal_dict:
+            print(f"Caramel Saus Bakje : {totaal_dict['Caramel_Saus_bakje']} x {CARAMEL_SAUS_BAKJE_PRIJS:.2f}€ = {totaal_dict['Caramel_Saus_bakje'] * SAUS_BAKJE_PRIJS:.2f}€")
+        if "Caramel_Saus_hoorntje" in totaal_dict:
+            print(f"Caramel Saus Hoorntje : {totaal_dict['Caramel_Saus_hoorntje']} x {CARAMEL_SAUS_HOORNTJE_PRIJS:.2f}€ = {totaal_dict['Caramel_Saus_hoorntje'] * SAUS_HOORNTJE_PRIJS:.2f}€")
         print("--------------------------------")
         print(f"Totaal: {totaal_dict['totaal']:.2f}€")
     print("Bedankt en tot ziens!")
