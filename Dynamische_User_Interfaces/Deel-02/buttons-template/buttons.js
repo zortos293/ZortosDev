@@ -8,6 +8,7 @@ let a = 0;
 function changeBackgroundAndImage(url) {
 if (a => 3) {
   image.src = "images/" + url + ".jpg";
+  a+=1;
   
 }
 image.src = "images/" + url + ".jpg";
