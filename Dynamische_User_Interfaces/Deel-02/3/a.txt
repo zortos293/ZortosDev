@@ -1,0 +1,4 @@
+420px < large explode
+500px < medium explode
+580px < small explode
+332px < Rocket
