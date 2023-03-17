@@ -9,7 +9,8 @@ function checkKey(e) {
     e = e || window.event;
     if(e.keyCode == 32){
     	console.log("spacebar");
-    } else if (e.keyCode == '38') {  // up arrow
+    } else if (e.keyCode == '38') {
+          // up arrow
         console.log("Up arrow");
     } else if (e.keyCode == '40') { // down arrow
         console.log("down arrow");
@@ -18,6 +19,7 @@ function checkKey(e) {
     } else if (e.keyCode == '39') {   // right arrow
     	console.log("right arrow");
     	image.style.backgroundPosition = animations[animationNr] + `px 0px`; // check goed de rupsband
+        
         if (animationNr == 7)
         {
             animationNr = 0;

@@ -5,7 +5,8 @@ var container = document.getElementById("container");
 var image = document.getElementById("image");
 var image1 = document.getElementById("image1");
 let a = 1;
-let reverse = false;
+let reverse = false
+console.log
 // A function that changes the background image of the container and the image in the HTML
 function changeBackgroundAndImage(url) {
   
@@ -13,6 +14,7 @@ function changeBackgroundAndImage(url) {
     if (a == 1) {
       reverse = false;
     }
+    
     else {
 
       a -= 1;
