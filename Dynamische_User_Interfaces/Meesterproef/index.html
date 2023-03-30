@@ -31,6 +31,13 @@
                     stemgedeelte.appendChild(button);
                 }
 
+                let clearButton = document.createElement("button");
+                    clearButton.innerText = "Reset";
+                    clearButton.addEventListener("click", () => {
+                        localStorage.clear();
+                });
+                
+
                 let stemmenTellenButton = document.createElement("button");
                 stemmenTellenButton.innerText = "Stemmen tellen";
                 stemmenTellenButton.addEventListener("click", () => {
@@ -41,11 +48,12 @@
                     let votes = JSON.parse(localStorage.getItem("votes") || "{}");
                     let maxVotes = 0;
                     let maxPartijen = [];
-
+                    let ul = document.createElement("ul");
+                    stemgedeelte.appendChild(ul);           
                     for (let partij in votes) {
-                        let span = document.createElement("span");
-                        span.innerText = `${partij}:${votes[partij]} \n `;
-                        stemgedeelte.appendChild(span);
+                        let li = document.createElement("li");
+                        li.innerText = `${partij}:${votes[partij]}`;
+                        ul.appendChild(li);
 
                         if (votes[partij] > maxVotes) {
                             maxVotes = votes[partij];
@@ -60,6 +68,7 @@
                     stemgedeelte.appendChild(p);
                 });
                 stemgedeelte.appendChild(stemmenTellenButton);
+                stemgedeelte.appendChild(clearButton);
             });
     </script>
 </body>
