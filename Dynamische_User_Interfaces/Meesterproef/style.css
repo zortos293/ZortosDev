@@ -1,0 +1,18 @@
+body {
+    background-color: gray;
+}
+#header, #footer {
+    text-align: center;
+    padding: 10px;
+}
+#header {
+    background-color: lightblue;
+}
+#footer {
+    background-color: lightgreen;
+}
+#stemgedeelte {
+    text-align: center;
+    padding: 10px;
+    background-color: lightyellow;
+}

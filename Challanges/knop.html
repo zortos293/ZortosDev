@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welkom</title>
+    <style>
+        button {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            color: white;
+            font-family: 'Top Secret Stamp';
+        }
+        button:hover {
+            background-color: red;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welkom</h1>
+    <button id="myButton">Click me</button>
+
+    <script>
+        let button = document.getElementById('myButton');
+        let h1 = document.querySelector('h1');
+        let clicked = false;
+
+        button.addEventListener('click', function() {
+            if (!clicked) {
+                h1.textContent = 'Welkom jouw naam';
+                clicked = true;
+            } else {
+                button.remove();
+            }
+        });
+    </script>
+</body>
+</html>

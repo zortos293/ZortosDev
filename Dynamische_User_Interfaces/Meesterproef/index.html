@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">Kies hier uw partij</div>
+    <div id="stemgedeelte">
+        <!-- Hier komen de stembuttons of de uitslag -->
+    </div>
+    <div id="footer">© 2023 - [Emin Yilmazer]</div>
+
+    <script>
+        // Replace this with the path to your text file
+        let filePath = "partijen.txt";
+
+        fetch(filePath)
+            .then(response => response.text())
+            .then(text => {
+                let partijen = text.split("\n");
+                let stemgedeelte = document.getElementById("stemgedeelte");
+
+                for (let partij of partijen) {
+                    let button = document.createElement("button");
+                    button.innerText = partij;
+                    button.addEventListener("click", () => {
+                        let votes = JSON.parse(localStorage.getItem("votes") || "{}");
+                        votes[partij] = (votes[partij] || 0) + 1;
+                        localStorage.setItem("votes", JSON.stringify(votes));
+                    });
+                    stemgedeelte.appendChild(button);
+                }
+
+                let stemmenTellenButton = document.createElement("button");
+                stemmenTellenButton.innerText = "Stemmen tellen";
+                stemmenTellenButton.addEventListener("click", () => {
+                    while (stemgedeelte.firstChild) {
+                        stemgedeelte.removeChild(stemgedeelte.firstChild);
+                    }
+
+                    let votes = JSON.parse(localStorage.getItem("votes") || "{}");
+                    let maxVotes = 0;
+                    let maxPartijen = [];
+
+                    for (let partij in votes) {
+                        let span = document.createElement("span");
+                        span.innerText = `${partij}:${votes[partij]} \n `;
+                        stemgedeelte.appendChild(span);
+
+                        if (votes[partij] > maxVotes) {
+                            maxVotes = votes[partij];
+                            maxPartijen = [partij];
+                        } else if (votes[partij] === maxVotes) {
+                            maxPartijen.push(partij);
+                        }
+                    }
+
+                    let p = document.createElement("p");
+                    p.innerText = `Partij(en) met de meeste stemmen: ${maxPartijen.join(", ")}`;
+                    stemgedeelte.appendChild(p);
+                });
+                stemgedeelte.appendChild(stemmenTellenButton);
+            });
+    </script>
+</body>
+</html>

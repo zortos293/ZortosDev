@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auto's</title>
+    <style>
+        .ferrari {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let cars = ["Audi A3",
+"BMW 3 Series",
+"Chevrolet Camaro",
+"Dodge Charger",
+"Ford Mustang",
+"Honda Civic",
+"Infiniti Q50",
+"Jaguar F-Type",
+"Kia Optima",
+"Lamborghini Huracan",
+"Mercedes-Benz C-Class",
+"Ferrari F8 Tributo",
+"Nissan Altima",
+"Porsche 911",
+"Range Rover Evoque",
+"Subaru Impreza",
+"Ferrari SF90 Stradale",
+"Tesla Model S",
+"Toyota Corolla",
+"Volkswagen Golf",
+"Acura NSX",
+"Bentley Continental",
+"Cadillac Escalade",
+"Ferrari 488 GTB",
+"Dodge Challenger",
+"Ferrari 458",
+"GMC Sierra",
+"Hyundai Elantra",
+"Jeep Grand Cherokee",
+"Ferrari SF90 Stradale",
+"Koenigsegg Agera",
+"Lexus LS",
+"Maserati GranTurismo",
+"Nissan GT-R",
+"Pagani Huayra",
+"Rolls-Royce Ghost",
+"Smart ForTwo",
+"Tesla Model X",
+"Toyota Prius",
+"Volkswagen Jetta",
+"Alfa Romeo Giulia",
+"Bugatti Chiron",
+"Chevrolet Corvette",
+"Ferrari Portofino",
+"Fiat 500",
+"GMC Yukon",
+"Honda Accord",
+"Jaguar XJ",
+"Kia Soul",
+"Lamborghini Aventador",
+"Mercedes-Benz E-Class",
+"Nissan Maxima",
+"Porsche Panamera",
+"Range Rover Sport",
+"Subaru Legacy",
+"Tesla Model 3",
+"Toyota Camry",
+"Volkswagen Passat"];
+        cars.sort();
+
+        let ul = document.createElement('ul');
+        document.body.appendChild(ul);
+
+        for (let car of cars) {
+            let li = document.createElement('li');
+            li.textContent = car;
+            if (car.includes('Ferrari')) {
+                li.classList.add('ferrari');
+            }
+            ul.appendChild(li);
+        }
+    </script>
+</body>
+</html>
