@@ -1,2 +1,2 @@
 # ZortosDev
-## HELLO WORLD
+Here are my school projects/Homework
